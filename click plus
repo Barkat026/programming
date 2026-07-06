@@ -1,0 +1,27 @@
+from tkinter import *
+
+root = Tk()
+root.geometry("500x500")
+
+
+def click():
+    l1.config(text="Button clicked:")
+
+    x = l2.cget("text")
+
+    if x == "":
+        x = 0
+    x = x + 1
+    l2.config(text=x)
+
+
+b1 = Button(root, text="Click Me", command=click)
+b1.place(x=150, y=10)
+
+l1 = Label(root)
+l1.place(x=150, y=30)
+
+l2 = Label(root)
+l2.place(x=250, y=30)
+
+root.mainloop()
