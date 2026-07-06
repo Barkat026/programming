@@ -1,0 +1,32 @@
+from tkinter import *
+root = Tk()
+root.geometry("400x400")
+
+def minus():
+
+
+    x = l1.cget("text")
+
+    if x == "":
+        x = 0
+    x = x - 1
+    l1.config(text=x)
+def plus():
+
+
+    x = l1.cget("text")
+
+    if x == "":
+        x = 0
+    x = x + 1
+    l1.config(text=x)
+
+
+b1 = Button(root,text="     -     ",command=minus)
+b1.place(x=10,y=10)
+b2 = Button(root,text="     +     ",command=plus)
+b2.place(x=100,y=10)
+l1=Label(text="")
+l1.place(x=60,y=10)
+
+root.mainloop()
