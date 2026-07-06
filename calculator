@@ -1,0 +1,47 @@
+from tkinter import *
+root= Tk()
+def calculate_button():
+    x = e1.get()
+    y = e2.get()
+    a= e3.get()
+    b=e4.get()
+
+    z = int(x)-(int(y)+int(a)+int(b))
+    l6.config(text="total amount:"+ str(z))
+
+def clear_button():
+    e1.delete(0,END)
+    e2.delete(0, END)
+    e3.delete(0, END)
+    e4.delete(0, END)
+    l6.config(text="")
+root.geometry("500x500")
+root.config(bg="#F1DEC4")
+l1 = Label(root,text="Welcome to Savings Calculator",bg="#BD4444")
+l1.place(x=150,y=30)
+l2= Label(root,text="Salary:",bg="#F1DEC4")
+l2.place(x=80,y=50)
+l3= Label(root,text="Travel:",bg="#F1DEC4")
+l3.place(x=80,y=70)
+l4= Label(root,text="Food:",bg="#F1DEC4")
+l4.place(x=80,y=90)
+l5= Label(root,text="Misc:",bg="#F1DEC4")
+l5.place(x=80,y=110)
+e1 = Entry(root)
+e1.place(x=150,y=50)
+e2 = Entry(root)
+e2.place(x=150,y =70)
+e3 = Entry(root)
+e3.place(x=150,y =90)
+e4 = Entry(root)
+e4.place(x=150,y =110)
+
+
+
+b1 = Button(root,text="calculate",command= calculate_button,bg="#E22F80")
+b1.place(x=180,y=140)
+b2 = Button(root,text="clear",command= clear_button,bg="#E22F80")
+b2.place(x=185,y=190)
+l6=Label(root)
+l6.place(x=180,y=170)
+root.mainloop()
