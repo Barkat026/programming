@@ -1,0 +1,13 @@
+import pandas as pd
+df=pd.read_csv(
+    r"C:\Users\Mi\Downloads\archive\en.openfoodfacts.org.products.tsv",sep=r'\t+'
+)
+print(df.head()) # first five
+print(df.info())
+print(df.shape[0])  #observations
+print(df.shape[1])  #no. of columns
+print(df.columns)   #name of columns
+print(df.columns[104])  #column name at 105th clmn
+print(df.loc[104])  # type of observation in this clmn
+print(df.index)   #indexing type
+print(df.loc[18,"product_name"])  #name of product at 19th position
